@@ -3,39 +3,77 @@
 @source inline("ps-8");
 @source inline("ps-12");
 @plugin "daisyui" {
-    themes: all;
-    logs: false;
+  themes: all;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "gruvbox";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: #3c3836;
+  --color-base-200: #282828;
+  --color-base-300: #504945;
+  --color-base-content: #fbf1c7;
+  --color-primary: #d64d0e;
+  --color-primary-content: #fbf1c7;
+  --color-secondary: #504945;
+  --color-secondary-content: #fbf1c7;
+  --color-accent: #fe8019;
+  --color-accent-content: #fbf1c7;
+  --color-neutral: #3c3836;
+  --color-neutral-content: #fbf1c7;
+  --color-info: #458588;
+  --color-info-content: #fbf1c7;
+  --color-success: #98971a;
+  --color-success-content: #fbf1c7;
+  --color-warning: #d79921;
+  --color-warning-content: #fbf1c7;
+  --color-error: #cc241d;
+  --color-error-content: #fbf1c7;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
 /* Default uses grid, this does not play well with array-containing fieldsets */
 .fieldset {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* Always wrap text in fieldset labels to avoid weird display with settings (long descriptions) */
 .fieldset > .label {
-    white-space: normal;
+  white-space: normal;
 }
 
 /* Remove outline everywhere, looks weird on smaller inputs/join-items */
-input, select, textarea, label {
-    --tw-outline-style: none !important;
-    outline-style: none !important;
+input,
+select,
+textarea,
+label {
+  --tw-outline-style: none !important;
+  outline-style: none !important;
 }
 
 /* Better support for list dividers (nested & not) */
 .list {
-    .list-row {
-        &::after {
-            content: none;
-        }
-
-        &:not(:last-of-type) {
-            &::after {
-                content: "";
-            }
-        }
+  .list-row {
+    &::after {
+      content: none;
     }
+
+    &:not(:last-of-type) {
+      &::after {
+        content: "";
+      }
+    }
+  }
 }

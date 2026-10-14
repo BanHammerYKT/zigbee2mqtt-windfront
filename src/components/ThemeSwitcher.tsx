@@ -29,6 +29,7 @@ const ALL_THEMES = [
     "Fantasy",
     "Forest",
     "Garden",
+    "Gruvbox",
     "Halloween",
     "Lemonade",
     "Lofi",
